@@ -43,22 +43,52 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/edAlcool"
-            android:layout_width="match_parent"
+
+
+
+        <TextView
+            android:id="@+id/labelGasolina"
+            android:layout_below="@id/edGasolina"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:ems="10"
-            android:hint="Preço da gasolina"
-            android:inputType="numberDecimal" />
+            android:text="Preço da gasolina"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"/>
+
 
         <EditText
             android:id="@+id/edGasolina"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="16dp"
             android:ems="10"
-            android:hint="alcool"
-            android:inputType="numberDecimal" />
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="@color/material_on_surface_stroke"/>
+
+
+        <TextView
+            android:id="@+id/labelAlcool"
+            android:layout_below="@id/edAlcool"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preço do álcool"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"/>
+
+        <EditText
+            android:id="@+id/edAlcool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginHorizontal="30dp"
+            android:ems="10"
+            android:hint="0"
+            android:inputType="numberDecimal"
+            android:background="@drawable/edittext_background"
+            android:backgroundTint="@color/material_on_surface_stroke"/>
 
         <Switch
             android:id="@+id/swPercentual"
