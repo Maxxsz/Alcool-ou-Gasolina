@@ -22,6 +22,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        if (savedInstanceState != null) {
+            swPercentual=savedInstanceState.getInt("swPercentual")
+        }
 
         etPrecoAlcool = findViewById(R.id.edAlcool)
         etPrecoGasolina = findViewById(R.id.edGasolina)
@@ -31,11 +34,7 @@ class MainActivity : AppCompatActivity() {
         val switch = findViewById<Switch>(R.id.swPercentual)
 
         switch.setOnCheckedChangeListener { buttonView, isChecked ->
-            swPercentual = if (isChecked) {
-                75
-            } else {
-                70
-            }
+            swPercentual = if (isChecked) { 75 } else { 70 }
         }
 
         btCalc.setOnClickListener {
@@ -79,5 +78,10 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy(){
         super.onDestroy()
         Log.wtf("PDM24","No Destroy")
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.putInt("swPercentual",swPercentual)
+        super.onSaveInstanceState(outState)
     }
 }

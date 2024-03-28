@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#87C4CB"
-    android:backgroundTint="#87C4CB"
+    android:backgroundTint="?attr/colorSecondaryVariant"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -29,6 +29,8 @@
             android:contentDescription="uma bomba de gasolina ilustrando o app"
             android:paddingVertical="10dp"
             android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="10dp"
             app:srcCompat="@mipmap/ic_launcher_foreground" />
 
         <TextView
@@ -39,7 +41,7 @@
             android:layout_marginBottom="10dp"
             android:text="Gasolina ou Álcool?"
             android:textAlignment="center"
-            android:textColor="#87C4CB"
+            android:textColor="?attr/colorPrimary"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -52,6 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Preço da gasolina"
+            android:textColor="?attr/android:textColorPrimary"
             android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"/>
 
@@ -62,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="30dp"
             android:layout_marginTop="16dp"
+            android:paddingLeft="10dp"
             android:ems="10"
             android:hint="0"
             android:inputType="numberDecimal"
@@ -75,6 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Preço do álcool"
+            android:textColor="?attr/android:textColorPrimary"
             android:layout_marginTop="16dp"
             android:layout_marginStart="16dp"/>
 
@@ -84,6 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginHorizontal="30dp"
+            android:paddingLeft="10dp"
             android:ems="10"
             android:hint="0"
             android:inputType="numberDecimal"
@@ -96,7 +102,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginHorizontal="40dp"
-            android:text="@string/_75" />
+            android:text="@string/_75"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
 
         <Button
             android:id="@+id/btCalcular"
@@ -104,8 +111,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginVertical="20dp"
-            android:backgroundTint="#CB584C"
-            android:text="Calcular" />
+            android:backgroundTint="?attr/colorSecondary"
+            android:background="@color/white"
+            android:text="Calcular"
+            android:textColor="@color/white"/>
 
         <TextView
             android:id="@+id/textMsg"
@@ -113,7 +122,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Ainda não sei qual é a melhor."
+            android:textColor="?attr/colorPrimary"
+            android:padding="10dp"
+            android:textAlignment="center"
             android:textSize="16sp" />
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
