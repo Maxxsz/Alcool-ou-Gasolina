@@ -1,11 +1,8 @@
 package com.example.alcoolougasolina
 
 import android.annotation.SuppressLint
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Switch
@@ -52,36 +49,23 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     textMsg.text = "É mais vantajoso abastecer com gasolina."
                 }
-
-                Log.d("PDM24", "No btCalcular, $percentual")
             } else {
                 textMsg.text = "Por favor, insira os valores de preço do álcool e da gasolina."
             }
         }
     }
-    override fun onResume(){
-        super.onResume()
-        Log.d("PDM24","No onResume")
-    }
-    override fun onStart(){
-        super.onStart()
-        Log.v("PDM24","No onStart")
-    }
-    override fun onPause(){
-        super.onPause()
-        Log.e("PDM24","No onPause")
-    }
-    override fun onStop(){
-        super.onStop()
-        Log.w("PDM24","No onStop")
-    }
-    override fun onDestroy(){
-        super.onDestroy()
-        Log.wtf("PDM24","No Destroy")
-    }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        outState.putInt("swPercentual",swPercentual)
         super.onSaveInstanceState(outState)
+
+        val savedResult: String = textMsg.text.toString()
+        outState.putString("savedResult", textMsg.text.toString())
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle ) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        val savedString = savedInstanceState.getString("savedResult", "Por favor, insira os valores de preço do álcool e da gasolina.")
+        textMsg.text = savedString
     }
 }
