@@ -3,7 +3,7 @@
     <style name="Theme.AlcoolOuGasolina" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#F27405</item>
-        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorPrimaryVariant">#F57C00</item>
         <item name="colorOnPrimary">#F27405</item>
         <item name="colorPrimaryDark">#363840</item>
         <!-- Secondary brand color. -->

@@ -8,4 +8,6 @@
     <string name="_0" translatable="false">0</string>
     <string name="ainda_n_o_sei_qual_a_melhor">Ainda não sei qual é a melhor.</string>
     <string name="pre_o_do_lcool">Preço do álcool</string>
+    <string name="valor_em_reais_do_lcool">Valor em reais do álcool</string>
+    <string name="valor_em_real_da_gasolina">Valor em real da gasolina</string>
 </resources>
